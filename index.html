@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookFinder - Library Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>BookFinder</h1>
+    <p>Discover books from around the world</p>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <h2>Find your next book</h2>
+
+      <form id="searchForm">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search books by title..."
+          required
+        >
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section class="results-section">
+      <h2>Search Results</h2>
+
+      <p id="loading" class="hidden">Loading books...</p>
+      <p id="error" class="hidden"></p>
+
+      <div id="bookList" class="book-grid"></div>
+    </section>
+
+    <section id="detailsSection" class="hidden">
+      <h2>Book Details</h2>
+      <div id="bookDetails"></div>
+      <button id="backButton" type="button">
+        Back to Results
+      </button>
+    </section>
+
+    <section class="parallel-section">
+      <h2>Explore Collections</h2>
+      <button id="loadCollections" type="button">
+        Load Two Collections
+      </button>
+
+      <div id="collectionsResult"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Lab 6 - Async, Fetch, Promise and REST API</p>
+    <p>Powered by Open Library API</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
